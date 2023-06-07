@@ -1,0 +1,24 @@
+<meta charset="UTF-8" />
+<script>
+    const temp = Number(prompt("Informe a temperatura atual (em graus!)").trim().replace(",","."));
+
+    if (Number.isNaN(temp)) {
+        document.write("Apenas números seu animal!")
+    } else {
+    if (temp < 100) {
+        document.write("A temperatura está muito baixa!");
+    }
+
+    else if (temp <= 200) {
+        document.write("A temperatura está baixa!");
+    }
+
+    else if (temp < 500) {
+        document.write("A temperatura está normal!");
+    }
+
+    else if (temp >= 500) {
+        document.write("A temperatura está muito alta!");
+    }
+}
+</script>
