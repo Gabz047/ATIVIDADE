@@ -1,0 +1,34 @@
+<meta charset="UTF-8" />
+<script>
+    // Problema: Financiamento
+    /*
+    Faça um script que pergunte o valor de um imóvel, em quantos anos será realizado o financiamento e também o salário do comprador.
+    
+    O script deverá calcular e mostrar o valor da prestação mensal, sabendo que ela não pode exceder 30% do salário ou então o financiamento será negado.
+    
+    Calcule e apresente o valor da parcela ao final do programa e informe se o financiamento foi ou não concedido ao interessado.
+    */
+
+    // Entrada
+    const imovel = Number(prompt("Qual o valor do imóvel?"))
+    const mesesfina = Number(prompt("Em quantos meses será realizado o financiamento? (Você pode parcelar até em 360 vezes!)"))
+    const salario = Number(prompt("Informe o seu salário?"))
+    
+    // Processamento
+    const valor = imovel / mesesfina
+    const taxa = valor + ((valor*2)/100)
+    porcentagem = ((salario*30)/100)
+
+    if (mesesfina <= 360) {
+    if (taxa > porcentagem) {
+        document.write(`O valor da parcela será de R$${taxa} por mês, mas não será concedido pois é maior que seu salário!`)
+    } else {
+        document.write(`O valor da parcela será de R$${taxa} por mês e será concedido!`)
+    }
+} else {
+    document.write(`Quer passar a vida toda pagando? Vamos cobrar juros de 100% se você fizer isso!`)
+}
+
+    // Saída
+
+</script>

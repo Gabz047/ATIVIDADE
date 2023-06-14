@@ -1,0 +1,21 @@
+<meta charset = "UTF-8">
+<script>
+    const salario = Number(prompt("Insira o seu salário"));
+    let reajuste = 0;
+    if (salario <= 2000) {
+        reajuste = salario + ((salario*15)/100)
+        document.write(`o seu salário era de R$${salario} e agora com reajuste de 15% é de R$${reajuste}`)
+    }
+    else if (salario > 2000) {
+        reajuste = salario + ((salario*10)/100)
+        document.write(`o seu salário era de R$${salario} e agora com reajuste de 10% é de R$${reajuste}`)
+    }
+    else if(salario > 4000) {
+        reajuste = salario + ((salario*7.5)/100)
+        document.write(`o seu salário era de R$${salario} e agora com reajuste de 7,5% é de R$${reajuste}`)
+    }
+    else if (salario > 7000) {
+        reajuste = salario + ((salario*5)/100)
+        document.write(`o seu salário era de R$${salario} e agora com reajuste de 5% é de R$${reajuste}`)
+    }
+</script>

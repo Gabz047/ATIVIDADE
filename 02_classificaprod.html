@@ -17,6 +17,8 @@
     // Processamento
     Math.trunc(codigo);
 
+    if (codigo >= 1 && codigo <= 20) {
+
     if (codigo === 1) {
         document.write("Alimento não-perecível!");
     }
@@ -28,6 +30,18 @@
     else if (codigo === 5 || codigo === 6) {
         document.write("Vestuário")
     }
+    else if (codigo === 7) {
+        document.write("Higiene pessoal")
+    }
+    else if (codigo >= 8 && codigo <= 15) {
+        document.write("Limpeza e Utensílios Domésticos")
+    }
+    else if (codigo >= 16 && codigo <= 20) {
+        document.write("Outros")
+    }
+} else {
+    document.write("Código inválido")
+}
     // Saída
 
 </script>
