@@ -24,11 +24,11 @@
     
     // Saída
     if (cargo == "M") {
-    viagens <= 10 ? diaria + ((diaria*20)/100) : diaria + ((diaria*35)/100);
+    viagens <= 10 ? diaria = diaria + ((diaria*20)/100) : diaria = diaria + ((diaria*35)/100);
     document.write(`Vocé é um Motorista e o valor final recebido pelas viagens foi de R$${diaria}`)
     }
     else if (cargo == "C") {
-        viagens <=10 ? diaria : diaria + ((diaria*10)/100);
+        viagens <=10 ? diaria = diaria : diaria = diaria + ((diaria*10)/100);
         document.write(`Vocé é um Cobrador e o valor final recebido pelas viagens foi de R$${diaria}`)
     }
 
