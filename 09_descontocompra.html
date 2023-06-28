@@ -1,0 +1,17 @@
+<meta charset="UTF-8" />
+<script>
+    const valorPC = parseFloat(prompt("Informe o valor do computador que você está vendendo").trim().replace(",","."));
+    const formaPag = prompt("Qual seŕa a forma de pagamento? digite (B) para Boleto, (D) para dinheiro e (P) para Pix").trim();
+
+    let desconto1 = valorPC - ((valorPC*3)/100)
+    let desconto2 = valorPC - ((valorPC*5)/100)
+    let desconto3 = valorPC - ((valorPC*10)/100)
+
+ if (formaPag == "B" || formaPag == "D" || formaPag == "P") {
+    formaPag == "B" ? document.write(`A sua forma de pagamento selecionada foi Boleto e o preço do computador ficou R$${desconto1}`)
+    : formaPag == "D" ? document.write(`A sua forma de pagamento selecionada foi Dinheiro e o preço do computador ficou R$${desconto2}`)
+    : document.write(`A sua de pagamento selecionada foi Pix e o preço do computador ficou R$${desconto3}`);
+ } else {
+    document.write("Não aceito outro tipo de pagamento, sai daqui sarnento");
+ }
+</script>

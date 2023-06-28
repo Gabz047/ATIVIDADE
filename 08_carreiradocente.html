@@ -1,0 +1,19 @@
+<meta charset="UTF-8" />
+<script>
+    let anoCarreira = Number(prompt("Quantos anos de carreira você possui?").trim());
+    let projetoPesquisa = Number(prompt("Quantos projetos de pesquisa você ja coordenou?").trim());
+    let projetosExtensao = Number(prompt("Quantos projetos de extensão você ja orientou?").trim());
+    let tcc = Number(prompt("Quantos TCC'S você ja orientou?").trim());
+
+    anoCarreira = anoCarreira*2.5;
+    projetoPesquisa = projetoPesquisa*5;
+    projetosExtensao = projetosExtensao*5;
+    tcc = tcc*3;
+
+    let allvalues = anoCarreira + projetoPesquisa + projetosExtensao + tcc;
+
+    allvalues <= 30 ? document.write(`Você tem ${allvalues} pontos, então está CONVIDADO`)
+    : allvalues <= 50 ? document.write (`Você tem ${allvalues} pontos, então está AGREGADO`)
+    : document.write(`Você tem ${allvalues} pontos, então é TITULAR`);
+
+</script>
