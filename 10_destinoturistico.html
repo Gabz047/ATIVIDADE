@@ -1,20 +1,23 @@
 <meta charset="UTF-8" />
 <script>
-    // Problema: Destino turístico
-    /*
-    Peça para o usuário informar o preço do transporte aéreo para dois destinos de viagem (São Paulo, Rio de Janeiro).
-    
-    Peça também para informar o preço do hotel para os dois destinos (São Paulo, Rio de Janeiro) e quantos dias pretende ficar no destino.
-    
-    Calcule o custo final para cada um e apresente a melhor decisão, considerando que o destino pretendido será o com custo final mais baixo. 
-    
-    Apresente o destino final e o custo final da viagem para o destino.
-    */
+// Problema: Destino turístico
+/*
+Peça para o usuário informar o preço do transporte aéreo para dois destinos de viagem (São Paulo, Rio de Janeiro).
+Peça também para informar o preço do hotel para os dois destinos (São Paulo, Rio de Janeiro) e quantos dias pretende ficar no destino.
+Calcule o custo final para cada um e apresente a melhor decisão, considerando que o destino pretendido será o com custo final mais baixo. 
+Apresente o destino final e o custo final da viagem para o destino.
+*/
 
-    // Entrada
-    
-    // Processamento
+// Entrada
+const precoTASP = Number(prompt("Informe o preço da viagem aérea para São Paulo.").trim().replace(",","."));
+const precoTARS = Number(prompt("Informe o preço da viagem aérea para Rio Grande do Sul.").trim().replace(",","."));
+const precoHTSP = Number(prompt("Informe o preço da diária do hotel em São Paulo").trim().replace(",","."));
+const precoHRS = Number(prompt("Informe o preço da diária do hotel em Rio Grande do Sul").trim().replace(",","."));
+const dias = Number(prompt("Informe por quantos dias pretende ficar no destino.").trim())
 
-    // Saída
+let precoVSP = precoTASP + (precoHTSP*dias);
+let precoVRS = precoTARS + (precoHRS*dias);
 
+precoVSP < precoVRS ? document.write(`O destino final é São Paulo e o custo total da viagem é de R$${precoVSP.toFixed(2).replace(".",",")}.`)
+: document.write(`O destino final é Rio Grande do Sul e o custo total da viagem é de R$${precoVRS.toFixed(2).replace(".",",")}.`);
 </script>
